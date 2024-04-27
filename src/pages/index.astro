@@ -1,20 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SectionA	from '../components/Astro/SectionA.astro'
 
 ---
 
 <Layout title="Portafolio">
 	<main>
-		<section class="section-a">
+		<SectionA />
+
+		<section class="bento-cell section-b">
 			
 		</section>
-		<section class="section-b">
+		<section class="bento-cell section-c">	|	
 			
 		</section>
-		<section class="section-c">
-			
-		</section>
-		<section class="section-d">
+		<section class="bento-cell section-d">
 			
 		</section>
 	</main>
@@ -28,6 +28,17 @@ import Layout from '../layouts/Layout.astro';
 		grid-template-areas:
 		"a a b"
 		"c d d";
+		min-height: 98vh;
+		gap: 2rem;
+	}
+	.section-b {
+		grid-area: b;
+	}
+	.section-c {
+		grid-area: c;
+	}
+	.section-d {
+		grid-area: d;
 	}
 
 </style>
