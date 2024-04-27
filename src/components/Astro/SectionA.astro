@@ -3,10 +3,18 @@
 ---
 
 <div class="bento-cell">
-	
 	<figure>
 		<img src="https://scontent.fsjo12-1.fna.fbcdn.net/v/t1.6435-1/162494658_125729942893446_5342045643499647094_n.jpg?stp=dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4ul636bs6zYQ7kNvgGtjvF_&_nc_ht=scontent.fsjo12-1.fna&oh=00_AfBzV9iin4avDB_Cc6C_XunuGOlV4UnUithHGC0yXoIUuw&oe=6653C41C" alt="face-photo">
 	</figure>
+	<article>
+		Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
+		Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
+		cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y
+		los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años,
+		sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. 
+		Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum,
+		y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+	</article>
 </div>
 
 <!-- Tenemos una variable --main-color -->
@@ -15,10 +23,20 @@
 	div {
 		grid-area: a;
 		display: flex;
-		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
 	}
+
+	article {
+		padding: 1rem;
+		max-height: 20rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
 	img[alt=face-photo] {
 		aspect-ratio: 1/1;
 		border-radius: 50%;
+		width: clamp(5rem, 100%, 20rem);
 	}
 </style>
