@@ -10,7 +10,7 @@
 * ~~Escribir qué habrá en el componente de información personal~~
 *
 
-## Seccion Principal
+## Seccion de Información Principal
 
 Quiero que tenga:
 * Mi foto de perfil
@@ -24,3 +24,8 @@ Y al tocar la seccion quiero que se abra una página que tenga
 * La descripción
 * Un botón para ir hacia atrás
 
+## Seccion de Habilidades
+
+## Sección de Contactos
+
+## Sección de Proyectos
