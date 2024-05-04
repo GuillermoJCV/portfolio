@@ -2,43 +2,83 @@
 
 ---
 
-<div class="bento-cell">
+<section class="bento-cell">
 	<figure>
-		<img src="https://scontent.fsjo12-1.fna.fbcdn.net/v/t1.6435-1/162494658_125729942893446_5342045643499647094_n.jpg?stp=dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4ul636bs6zYQ7kNvgGtjvF_&_nc_ht=scontent.fsjo12-1.fna&oh=00_AfBzV9iin4avDB_Cc6C_XunuGOlV4UnUithHGC0yXoIUuw&oe=6653C41C" alt="face-photo">
+		<img src="https://scontent.fsjo12-1.fna.fbcdn.net/v/t1.6435-1/162494658_125729942893446_5342045643499647094_n.jpg?stp=dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4ul636bs6zYQ7kNvgGtjvF_&_nc_ht=scontent.fsjo12-1.fna&oh=00_AfBzV9iin4avDB_Cc6C_XunuGOlV4UnUithHGC0yXoIUuw&oe=6653C41C" alt="face">
+		<figcaption>Guillermo Castro Vargas</figcaption>
 	</figure>
 	<article>
-		Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-		Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
-		cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y
-		los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años,
-		sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. 
-		Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum,
-		y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+		<description>
+			<p>Soy un programador que le gusta saber cómo funciona toda la web.</p>
+			<p>Tengo conocimientos en <strong>Redes y Comunicaciones</strong>, <strong>Front-end</strong> y <strong>Back-end</strong>.</p>
+			<p>Además, me gusta <strong>trabajar en equipo</strong> o independientemente y</p>
+			<p>suelo ser muy <strong>activo</strong>, <strong>sociable</strong>, me gusta ayudar y <strong>me adapto</strong> bastante bien</p>
+			<p>a las diferentes personalidades, costumbres y puntos de vista de las personas.</p>
+		</description>
+		<description>
+			<p>Entre mis hobbies destacan cosas como regar plantas, jugar videojuegos, ver series</p>
+			<p>me gusta investigar sobre plantas, animales, historia y la mayoría del tiempo leo</p>
+			<p>documentaciones ya que me apasiona ver recursos que podrían ayudarme a mejorar como programador.</p>
+		</description>
 	</article>
-</div>
-
-<!-- Tenemos una variable --main-color -->
+</section>
 
 <style>
-	div {
-		grid-area: a;
+	section {
 		display: flex;
 		align-items: center;
 		gap: 2rem;
 		padding: 1rem;
-		aspect-ratio: 2/1;
 	}
 
+	figure {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+	img[alt=face] {
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		width: clamp(5rem, 20vw, 20rem);
+	}
+	figcaption {
+		font-family: Kode Mono;
+		white-space: nowrap;
+		border-right: 2px solid #111;
+		width: 23.5ch;
+
+		animation: escribir 2s steps(23), parpadeo 500ms infinite step-end alternate;
+		overflow: hidden;
+	}
+	@keyframes escribir {
+		from { 
+			width: 0; 
+		}
+	}
+	@keyframes parpadeo {
+		50% { 
+			border-right: 4px solid transparent;
+		}
+	}
+
+
 	article {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 		padding: 1rem;
 		max-height: 20rem;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-
-	img[alt=face-photo] {
-		aspect-ratio: 1/1;
-		border-radius: 50%;
-		width: clamp(5rem, 20vw, 20rem);
+	description {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		font-family: Ubuntu;
+		font-weight: 500;
+		font-kerning: none;
+		color: #ddd;
 	}
 </style>
