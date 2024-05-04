@@ -12,6 +12,9 @@
 
 ## Seccion de Información Principal
 
+### Tareas pendientes
+* Arreglar el problema de mi nombre (hace que el article se mueva)
+
 Quiero que tenga:
 * ~~Mi foto de perfil~~
 * Mi nombre
@@ -26,6 +29,19 @@ Y al tocar la seccion quiero que se abra una página que tenga
 
 ## Seccion de Habilidades
 
+Quiero que tenga:
+* Un título que diga "habilidades"
+* Mis habilides (Java Script, CSS, HTML, React, Node.js, Express.js, Bootstrap, Tailwind)
+
+Y al tocar las habilidades:
+* Quiero que se abra una página con todas las habilidas tanto técnicas como sociales y de organización.
+
+
 ## Sección de Contactos
+
+Quiero que tenga:
+* Mi correo
+* Mi linkedin
+* Mi github
 
 ## Sección de Proyectos
