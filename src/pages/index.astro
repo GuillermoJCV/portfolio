@@ -8,10 +8,14 @@ import SectionD	from '../components/Astro/SectionD.astro'
 
 <Layout title="Portafolio">
 	<main>
-		<SectionA />
-		<SectionB />
-		<SectionC />
-		<SectionD />
+		<div class="top">
+			<SectionA />
+			<SectionB />
+		</div>
+		<div class="bottom">
+			<SectionC />
+			<SectionD />
+		</div>
 
 	</main>
 </Layout>
@@ -19,30 +23,40 @@ import SectionD	from '../components/Astro/SectionD.astro'
 
 
 <style>
-	main {
-		padding: 1rem;
-		display: grid;
-		grid-template-areas:
-		"a a b"
-		"c d d";
-		min-height: 98vh;
-		gap: 2rem;
-	}
 	@media screen and (width < 700px) {
 		main {
-			grid-template-areas:
-				"a"
-				"b"
-				"c"
-				"d";
-
+			display: flex;
+			flex-direction: column;
+			padding: 1rem;
+			gap: 2rem;
+			& div {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+			}
 		}
 	}
+
 	@media screen and (width > 701px) {
 		main {
-			grid-template-areas:
-				"a a b"
-				"c d d";
+			--main-padding: 1rem;
+			--space-between: 2rem;
+			display: flex;
+			flex-direction: column;
+			padding: var(--main-padding);
+			gap: var(--space-between);
+		}
+		.top {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: var(--space-between);
+			min-height: calc(50vh - var(--space-between) - var(--main-padding));
+		}
+		.bottom {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			gap: var(--space-between);
+			min-height: calc(50vh - var(--space-between) - var(--main-padding));
 		}
 	}
 
