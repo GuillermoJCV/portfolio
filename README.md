@@ -40,8 +40,23 @@ Y al tocar las habilidades:
 ## Sección de Contactos
 
 Quiero que tenga:
-* Mi correo
-* Mi linkedin
-* Mi github
+* ~~Mi correo~~
+* ~~Mi linkedin~~
+* ~~Mi github~~
 
 ## Sección de Proyectos
+
+Quiero que cada proyecto tenga:
+* Una foto (que sus proporciones sean 1700/1000)
+* Un nombre
+* Una descripción
+* Habilidades que utilicé para realizar el proyecto
+
+Cuando se toque un proyecto quiero que se abra más información con:
+* Una foto en grande
+* Un nombre el nombre centrado
+* Una descripción
+* Habilidades que utilicé para realizar el proyecto
+
+* Problemas que tuve que resolver al realizar el proyecto
+* Una pequeña documentación del proyecto
