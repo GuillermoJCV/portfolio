@@ -6,14 +6,14 @@
 * ~~Mover la seccion a a otro componente~~ 
 * ~~Escoger una paleta de colores que me guste~~
 * ~~Separar todos los componentes del componente principal~~
-* Acomodar las secciones para que todas se vean igual.
+* ~~Acomodar las secciones para que todas se vean igual.~~
 * ~~Escribir qué habrá en el componente de información personal~~
-*
+* Rellenar la primera seccion con una descripcion de mí
 
 ## Seccion de Información Principal
 
 Quiero que tenga:
-* Mi foto de perfil
+* ~~Mi foto de perfil~~
 * Mi nombre
 * Lo que hago
 
