@@ -47,9 +47,9 @@ Quiero que tenga:
 ## Sección de Proyectos
 
 Quiero que cada proyecto tenga:
-* Una foto (que sus proporciones sean 1700/1000)
-* Un nombre
-* Una descripción
+* ~~Una foto (que sus proporciones sean 1700/1000)~~
+* ~~Un nombre~~
+* ~~Una descripción~~
 * Habilidades que utilicé para realizar el proyecto
 
 Cuando se toque un proyecto quiero que se abra más información con:
