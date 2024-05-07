@@ -16,8 +16,10 @@ const { title, imgUrl } = Astro.props;
 			</figcaption>
 		</figure>
 	</a>
-	<slot name="description"/>
-	<slot name="skills">
+	<section>
+		<slot name="description"/>
+		<slot name="skills">
+	</section>
 </div>
 
 <style>
@@ -43,4 +45,10 @@ const { title, imgUrl } = Astro.props;
 	img:hover {
 		scale: 1.3;
 	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+	}
+
 </style>
