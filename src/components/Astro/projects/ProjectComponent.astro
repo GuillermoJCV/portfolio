@@ -2,18 +2,16 @@
 interface Props {
 	title: string;
 	imgUrl: string;
+	webUrl: string;
 }
 
-const { title, imgUrl } = Astro.props;
+const { title, imgUrl, webUrl } = Astro.props;
 ---
 
 <div>
-	<a href="https://roscals.web.app" target="__blank">
+	<a href={webUrl} target="__blank">
 		<figure>
 			<img src={imgUrl} alt={title}/>
-			<figcaption>
-				{title}
-			</figcaption>
 		</figure>
 	</a>
 	<section>
@@ -47,8 +45,11 @@ const { title, imgUrl } = Astro.props;
 	}
 
 	section {
+		padding: 1rem;
 		display: flex;
 		flex-direction: column;
+		overflow-y: auto;
+		overflow-x: hidden;
 	}
 
 </style>
