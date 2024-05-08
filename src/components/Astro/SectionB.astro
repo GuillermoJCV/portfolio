@@ -76,13 +76,23 @@ import { BiLogoTailwindCss, BiLogoFirebase } from "react-icons/bi";
 		padding: 1rem;
 		border-radius: 1rem;
 		color: var(--color-three);
-		background-color: var(--second-color);
+		background: var(--text-gradient-2);
+		filter: brightness(1);
+		transition: filter 200ms;
+
 	}
 	li:hover {
-		filter: brightness(1.2);
+		filter: brightness(1.5);
 	}
 	li svg {
 		font-size: 1.7rem;
+		font-weight: 900;
+		color: var(--contrast-color);
+	}
+	h6 {
+		color: var(--contrast-color);
+		letter-spacing: 1px;
+		font-family: Kode Mono;
 	}
 
 </style>
