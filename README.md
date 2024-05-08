@@ -29,9 +29,12 @@ Y al tocar la seccion quiero que se abra una página que tenga
 
 ## Seccion de Habilidades
 
+Problemas
+* Cambiar el color de los botones de las skills
+
 Quiero que tenga:
-* Un título que diga "habilidades"
-* Mis habilides (Java Script, CSS, HTML, React, Node.js, Express.js, Bootstrap, Tailwind)
+* ~~Un título que diga "habilidades"~~
+* ~~Mis habilides (Java Script, CSS, HTML, React, Node.js, Express.js, Bootstrap, Tailwind)~~
 
 Y al tocar las habilidades:
 * Quiero que se abra una página con todas las habilidas tanto técnicas como sociales y de organización.
@@ -48,9 +51,9 @@ Quiero que tenga:
 
 Quiero que cada proyecto tenga:
 * ~~Una foto (que sus proporciones sean 1700/1000)~~
-* ~~Un nombre~~
+* Un nombre
 * ~~Una descripción~~
-* Habilidades que utilicé para realizar el proyecto
+* ~~Habilidades que utilicé para realizar el proyecto~~
 
 Cuando se toque un proyecto quiero que se abra más información con:
 * Una foto en grande
