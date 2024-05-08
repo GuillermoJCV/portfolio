@@ -1,5 +1,7 @@
 ---
 import ProjectComponent from "./projects/ProjectComponent.astro"
+import { 	SiFirebase, SiHtml5, SiCss3, SiJavascript, SiVite,
+			SiGooglecloud, SiVercel } from "react-icons/si";
 
 ---
 
@@ -8,24 +10,123 @@ import ProjectComponent from "./projects/ProjectComponent.astro"
 	<ProjectComponent 
 	title="Roscals web"
 	imgUrl="https://i.pinimg.com/originals/4d/57/d0/4d57d0c826e8029ce917fe5b2efe0897.png"
+	webUrl="https://roscals.web.app"
 	>
-	<article slot="description">
-		<p>En este proyecto</p>
-	</article>
+		<article slot="description">
+			<p>
+				En este proyecto me dieron 3 días para terminarlo y me pidieron especificamente agregar imagenes y la información
+				que se puede ver en el proyecto
+			</p>
+			<p>
+				Algunos de los retos a los que me enfrenté fue el tiempo, claramente, pero también a utilizar
+				features nuevas de JavaScript que no había utilizado antes como el IntersectionObserver.
+			</p>
+			<p>
+				Algunas de las tecnologías que utilicé fueron:
+			</p>
+		</article>
+		<ul slot="skills">
+			<li>
+				<SiFirebase />
+				<p>Firebase</p>
+			</li>
+			<li>
+				<SiHtml5 />
+				<p>HTML</p>
+			</li>
+			<li>
+				<SiCss3 />
+				<p>CSS</p>
+			</li>
+			<li>
+				<SiJavascript />
+				<p>JS</p>
+			</li>
+			<li>
+				<SiVite />
+				<p>Vite</p>
+			</li>
+		</ul>
+	</ProjectComponent>
+	<ProjectComponent 
+	title="SQL Course"
+	imgUrl="https://i.pinimg.com/originals/c1/80/36/c18036408cd8560906d52cad2590aee9.png"
+	webUrl="https://sql2024deploy.web.app/login/"
+	>
+		<article slot="description">
+			<p>
+				Este proyecto es un proyecto en producción que lamentablemente
+				no se puede ver por dentro ya que tiene login. Y se debe pagar para verlo según lo que me ordenaron
+			</p>
+			<p>
+				Algunos de los retos que tuve que superar es que el proyecto ya había sido iniciado desde antes
+				así que me tocó refactorizar el código, modularizarlo, y pasar la información a cloud.
+				Afortunadamente todo eso pude lograrlo y agregar más sistemas.
+			</p>
+			<p>
+				Algunas de las tecnologías que utilicé fueron:
+			</p>
+		</article>
+		<ul slot="skills">
+			<li>
+				<SiGooglecloud />
+				<p>GCloud</p>
+			</li>
+			<li>
+				<SiVercel />
+				<p>Vercel</p>
+			</li>
+			<li>
+				<SiCss3 />
+				<p>CSS</p>
+			</li>
+			<li>
+				<SiJavascript />
+				<p>JS</p>
+			</li>
+			<li>
+				<SiVite />
+				<p>Vite</p>
+			</li>
+		</ul>
 	</ProjectComponent>
 
-</section>
+</section>|
 
 <!-- Tenemos una variable --main-color -->
 
 <style>
 	section {
+		--inherit-padding: 0.5rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 2em;
 		gap: 1rem;
+		padding: 1rem;
 		max-height: 45vh;
 		overflow: auto;
 	}
+	article {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		padding: var(--inherit-padding);
+		font-family: Ubuntu;
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+		list-style: none;
+		padding-inline: var(--inherit-padding);
+	}
+	li {
+		font-family: Kode Mono;
+		text-align: center;
+	}
+	svg {
+		font-size: 1.5rem;
+	}
+
 </style>
