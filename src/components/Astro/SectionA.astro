@@ -8,18 +8,9 @@
 		<figcaption>Guillermo Castro Vargas</figcaption>
 	</figure>
 	<article>
-		<description>
-			<p>Soy un programador que le gusta saber cómo funciona toda la web.</p>
-			<p>Tengo conocimientos en <strong>Redes y Comunicaciones</strong>, <strong>Front-end</strong> y <strong>Back-end</strong>.</p>
-			<p>Además, me gusta <strong>trabajar en equipo</strong> o independientemente y</p>
-			<p>suelo ser muy <strong>activo</strong>, <strong>sociable</strong>, me gusta ayudar y <strong>me adapto</strong> bastante bien</p>
-			<p>a las diferentes personalidades, costumbres y puntos de vista de las personas.</p>
-		</description>
-		<description>
-			<p>Entre mis hobbies destacan cosas como regar plantas, jugar videojuegos, ver series</p>
-			<p>me gusta investigar sobre plantas, animales, historia y la mayoría del tiempo leo</p>
-			<p>documentaciones ya que me apasiona ver recursos que podrían ayudarme a mejorar como programador.</p>
-		</description>
+		<h2>Soy</h2>
+		<h3>React Developer</h3>
+		<button>Ver más</button>
 	</article>
 </section>
 
@@ -71,14 +62,41 @@
 		max-height: 20rem;
 		overflow: hidden;
 		text-overflow: ellipsis;
-	}
-	description {
-		display: flex;
-		flex-direction: column;
-		gap: 5px;
 		font-family: Ubuntu;
-		font-weight: 500;
-		font-kerning: none;
-		color: #ddd;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 2.5rem;
+		background-color: inherit;
+		background: var(--background-gradient-1),
+            		var(--background-gradient-2),
+            		var(--background-gradient-3);
+		filter: invert(100%);
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+
+	}
+	button {
+		align-self: center;
+		aspect-ratio: 3/1;
+		width: 6rem;
+		background: var(--contrast-gradient);
+		color: var(--color-one);
+		font-weight: 800;
+		border: 0;
+		scale: 1;
+		filter: drop-shadow(0px 0px 0px);
+		border-radius: 0.5rem;
+		transition: scale 150ms, filter 150ms;
+	}
+	button:hover {
+		scale: 1.2;
+		filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
+	}
+	button:active {
+		scale: 1.2;
+		filter: drop-shadow(0px 0px 5px rgba(255,255,0,0.5)) brightness(1.3);
 	}
 </style>

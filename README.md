@@ -17,7 +17,7 @@
 
 Quiero que tenga:
 * ~~Mi foto de perfil~~
-* Mi nombre
+* ~~Mi nombre~~
 * Lo que hago
 
 Y al tocar la seccion quiero que se abra una página que tenga
