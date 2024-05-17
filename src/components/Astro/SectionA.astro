@@ -10,7 +10,7 @@
 	<article>
 		<h2>Soy</h2>
 		<h3>React Developer</h3>
-		<button>Ver más</button>
+		<a href="/personal-info">Ver más</a>
 	</article>
 </section>
 
@@ -89,7 +89,10 @@
 		-webkit-background-clip: text;
 
 	}
-	button {
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		align-self: center;
 		aspect-ratio: 3/1;
 		width: 6rem;
@@ -101,12 +104,15 @@
 		filter: drop-shadow(0px 0px 0px);
 		border-radius: 0.5rem;
 		transition: scale 150ms, filter 150ms;
+		text-decoration: none;
+		user-select: none;
+		cursor: pointer;
 	}
-	button:hover {
+	a:hover {
 		scale: 1.2;
 		filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
 	}
-	button:active {
+	a:active {
 		scale: 1.2;
 		filter: drop-shadow(0px 0px 5px rgba(255,255,0,0.5)) brightness(1.3);
 	}
