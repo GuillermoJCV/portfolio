@@ -21,8 +21,21 @@ const { title, imgUrl, webUrl } = Astro.props;
 </div>
 
 <style>
+	@media (width < 700px) {
+		:root {
+			--justify-div: center;
+			--section-display: none;
+		}
+	}
+	@media (width > 701px) {
+		:root {
+			--justify-div: flex-start;
+			--section-display: flex;
+		}
+	}
 	div {
 		display: flex;
+		justify-content: var(--justify-div);
 		gap: 1rem;
 		background: var(--text-gradient-1),
     				var(--text-gradient-2),
@@ -48,7 +61,7 @@ const { title, imgUrl, webUrl } = Astro.props;
 
 	section {
 		padding: 1rem;
-		display: flex;
+		display: var(--section-display);
 		flex-direction: column;
 		overflow-y: auto;
 		overflow-x: hidden;
