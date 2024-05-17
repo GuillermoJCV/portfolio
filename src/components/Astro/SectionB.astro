@@ -7,6 +7,18 @@ import { BiLogoTailwindCss, BiLogoFirebase } from "react-icons/bi";
 	<h2>Skills</h2>
 	<ul>
 		<li>
+			<DiHtml5/>
+			<h6>HTML</h6>
+		</li>
+		<li>
+			<DiCss3 />
+			<h6>CSS</h6>
+		</li>
+		<li>
+			<DiJavascript />
+			<h6>Java Script</h6>
+		</li>
+		<li>
 			<DiReact/>
 			<h6>React</h6>
 		</li>
@@ -19,21 +31,8 @@ import { BiLogoTailwindCss, BiLogoFirebase } from "react-icons/bi";
 			<h6>NPM</h6>
 		</li>
 		<li>
-			<DiJavascript />
-			<h6>Java Script</h6>
-		</li>
-		<li>
-			<DiHtml5/>
-			<h6>HTML</h6>
-		</li>
-		<li>
 			<DiNodejsSmall/>
 			<h6>Node</h6>
-		</li>
-
-		<li>
-			<DiCss3 />
-			<h6>CSS</h6>
 		</li>
 		<li>
 			<DiBootstrap />
@@ -43,11 +42,6 @@ import { BiLogoTailwindCss, BiLogoFirebase } from "react-icons/bi";
 			<BiLogoTailwindCss />
 			<h6>Tailwind</h6>
 		</li>
-		<li>
-			<DiPython />
-			<h6>Python</h6>
-		</li>
-
 	</ul>
 </section>
 
@@ -66,26 +60,31 @@ import { BiLogoTailwindCss, BiLogoFirebase } from "react-icons/bi";
 
 	ul {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 2rem;
-		padding: 0;
+		margin-block: auto;
+		grid-template-columns: repeat(auto-fill, minmax(5rem, 6rem));
+		justify-content: center;
+		justify-items: center;
+		gap: clamp(0.5rem, 1vw, 2rem);
 		list-style: none;
 	}
 	li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-block: 1rem;
+		width: clamp(5rem, 10vw, 5rem);
 		text-align: center;
-		padding: 1rem;
 		border-radius: 1rem;
 		color: var(--color-three);
 		background: var(--contrast-gradient);
 		filter: brightness(1);
 		transition: filter 200ms;
-
 	}
 	li:hover {
 		filter: brightness(1.5);
 	}
 	li svg {
-		font-size: 1.7rem;
+		font-size: clamp(1rem, 5vw, 2rem);
 		font-weight: 900;
 		color: #010101;
 	}
