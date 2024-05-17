@@ -15,8 +15,19 @@
 </section>
 
 <style>
+	@media screen and (width < 700px) {
+		:root {	
+			--section-direction: column;
+		}
+	}
+	@media screen and (width > 701px) {
+		:root {
+			--section-direction: row;
+		}
+	}
 	section {
 		display: flex;
+		flex-direction: var(--section-direction);
 		align-items: center;
 		gap: 2rem;
 		padding: 1rem;
