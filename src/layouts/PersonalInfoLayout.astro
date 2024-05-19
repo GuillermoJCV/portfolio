@@ -1,0 +1,90 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono&family=Ubuntu&display=swap');
+
+	:root {
+		color-scheme: dark light;
+
+		/*Para los colores de fondo*/
+		--main-color: rgb(86,0,0);
+		--second-color: rgb(130,0,0);
+		--third-color: rgb(190,0,0);
+
+		/*Para los colores de texto*/
+		--color-one: rgb(125,255,255);
+		--color-two: rgb(161,255,253);
+		--color-three: rgb(205,255,252);
+
+		/*Para el contraste*/
+		--contrast-color: rgb(255,251,68);
+		--contrast-gradient: radial-gradient(circle, rgba(253,254,232,1) 0%, rgba(251,255,137,1) 12%, rgba(134,95,13,1) 78%, rgba(67,41,5,1) 100%);
+
+		--background-gradient-2: linear-gradient(217deg, rgba(86,0,0,.8), rgba(86,0,0,0) 70.71%);
+		--background-gradient-3: linear-gradient(127deg, rgba(130,0,0,.8), rgba(130,0,0,0) 70.71%);
+		--background-gradient-1: linear-gradient(336deg, rgba(190,0,0,.8), rgba(190,0,0,0) 70.71%);
+
+		--text-gradient-2: linear-gradient(217deg, rgba(125,255,255,.8), rgba(125,255,255,0) 70.71%);
+		--text-gradient-3: linear-gradient(127deg, rgba(161,255,253,.8), rgba(161,255,253,0) 70.71%);
+		--text-gradient-1: linear-gradient(336deg, rgba(205,255,252,.8), rgba(205,255,252,0) 70.71%);
+
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	@media screen and (width < 700px) {
+
+	}
+	@media screen and (width > 701px) {
+
+	}
+
+	strong {
+		color: var(--third-color);
+	}
+
+	.emphasis {
+		font-size: 1.2rem;
+		background-color: inherit;
+		background: var(--contrast-color);
+		font-weight: 900;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		filter: brightness(1.5) drop-shadow(0px 0px 5px rgba(125,255,255,0.3));
+	}
+	.emphasis-two {
+		font-size: 1.2rem;
+		background-color: inherit;
+		background: var(--second-color);
+		font-weight: 900;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		filter: brightness(1.5) drop-shadow(0px 0px 5px rgba(125,255,255,0.3)) invert(100%);
+	}
+
+
+</style>
