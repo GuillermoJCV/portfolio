@@ -1,0 +1,219 @@
+---
+import PersonalInfoLayout from '@/layouts/PersonalInfoLayout.astro';
+import { FaReact } from "react-icons/fa";
+
+---
+
+<PersonalInfoLayout title="Personal Information">
+	<main>
+		<a href="/">Back</a>
+		<figure>
+			<img src="https://scontent.fsjo12-1.fna.fbcdn.net/v/t1.6435-1/162494658_125729942893446_5342045643499647094_n.jpg?stp=dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4ul636bs6zYQ7kNvgGtjvF_&_nc_ht=scontent.fsjo12-1.fna&oh=00_AfBzV9iin4avDB_Cc6C_XunuGOlV4UnUithHGC0yXoIUuw&oe=6653C41C" alt="face">
+			<figcaption>
+				Guillermo Jesús Castro Vargas
+			</figcaption>
+		</figure>
+		<brief-description>
+			<p>
+				Soy un desarrollador <strong>Front-end</strong> enfocado en <strong>React</strong>,
+			</p>
+			<p>
+				lo suficientemente <strong>proactivo</strong>
+				como para siempre ofrecerme a crear proyectos con otros desarrolladores,
+				aunque estos proyectos sean de aprendizaje o no, siempre los veo como una oportunidad.
+			</p>
+			<p>
+				Me gusta mucho <strong>ayudar</strong> así que siempre me ofrezco a <strong>enseñar</strong> cómo se utiliza esta hermosa
+				librería para que más desarrolladores entren al hermoso mundo de React.
+			</p>
+			<custom-emphasis class="emphasis">
+				No lo sé todo, pero lo que sé, lo comparto
+			</custom-emphasis>
+		</brief-description>
+		<section>
+			<details class="hobbies">
+				<summary>Hobbies</summary>
+				<personal-hobbies>
+					<p>
+						Me gustan las plantas, los animales, hacer ejercicio, ver videos y leer.
+					</p>
+					<p>
+						Entre las plantas que me gustan, principalmente me enfoco en plantas medicinales o mentas.
+						Como el orégano, la menta de jamaica, la Nepeta Catarea. Pero también me gustan las rosas,
+						y en general las plantas que tienen muchos colores.
+					</p>
+					<p>
+						La mayoría de animales me gustan pero soy más de gatos, me gusta mucho su historia y también su naturaleza
+					</p>
+					</personal-hobbies>
+			</details>
+			<details class="skills">
+				<summary>Skills</summary>
+				<p>
+					Como ya en mi <a href="/" class="emphasis-two">página principal</a> pueden ver mis <strong class="emphasis-two">technical skills</strong>, además me gustaría poner una ligera descripción,
+					así no parecerán skills vacías como siempre parecen.
+				</p>
+				<ul>
+					<li>
+						<p class="emphasis-two">Buena organización</p>
+						<p>(Jira, Listas físicas)</p>
+					</li>
+					<li>
+						<p class="emphasis-two">Trabajo en equipo </p>
+						<p>(Suelo ayudar mucho a mis compañeros de equipo)</p>
+					</li>
+					<li>
+						<p class="emphasis-two">Aprendizaje veloz </p>
+						<p>(Busco mucha información sobre cómo funciona por debajo todo)</p>
+					</li>
+				</ul>
+			</details>
+			<react-icon class="icon">
+				<FaReact />
+			</react-icon>
+			<script client:only>
+				const hobbies = document.querySelector("details.hobbies")
+				const skills = document.querySelector("details.skills")
+				const icon = document.querySelector("react-icon.icon")
+
+				const handleOnClick = async (e) => {
+					const width = window.innerWidth
+					if((hobbies.open || skills.open) && width > 810) {
+						icon.classList.remove("hide")
+					} else {
+						icon.classList.add("hide")
+					}
+				}
+				hobbies.addEventListener('click', handleOnClick)
+				skills.addEventListener('click', handleOnClick)
+
+			</script>
+		</section>
+	</main>
+</PersonalInfoLayout>
+
+<style>
+@media ( width < 810px ){
+	main {
+		--section-display: flex;
+		--main-width: 100%;
+	}
+}
+@media ( width > 811px ){
+	main {
+		--section-display: grid;
+		--main-width: clamp(20rem, 50vw, 50rem);
+	}
+}
+
+main {
+	box-shadow: 0px	0px	5px var(--color-one);
+	border-inline: 2px solid var(--color-one);
+	margin-inline: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+	width: var(--main-width);
+	min-height: 100vh;
+
+	font-family: Ubuntu;
+}
+
+figure {
+	padding-block: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+img {
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+}
+figcaption {
+		font-size: 2rem;
+		background-color: inherit;
+		background: linear-gradient(to bottom, var(--main-color), var(--third-color));
+        text-shadow: 2px 2px 5px rgba(205,255,252, 0.1);
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+}
+
+brief-description {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+	font-family: Kode Mono;
+}
+custom-emphasis {
+	align-self: center;
+}
+
+section {
+	display: var(--section-display);
+	flex-direction: column;
+	align-items: center;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	grid-template-areas: 
+	"hobbies skills"
+	"icon icon";
+	border-radius: 1rem;
+	background: linear-gradient(to bottom, var(--main-color) 10%, transparent 100%);
+	width: 100%;
+	margin-block: 2rem;
+	overflow-y: hidden;
+}
+
+.hobbies {
+	grid-area: hobbies;
+}
+.skills {
+	grid-area: skills;
+}
+.icon {
+	grid-area: icon;
+}
+
+react-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hide {
+	display: none;
+}
+
+react-icon > svg {
+	font-size: 5rem;
+}
+
+details {
+	width: 100%;
+	padding: 1rem;
+	font-family: Kode Mono;
+}
+
+summary {
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+
+personal-hobbies {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: none;
+	list-style: none;
+}
+
+</style>

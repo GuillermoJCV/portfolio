@@ -1,33 +1,97 @@
 ---
-
+import { DiReact, DiJavascript , DiNodejsSmall, DiHtml5, DiCss3, DiBootstrap, DiGit, DiNpm, DiPython,  } from "react-icons/di";
+import { BiLogoTailwindCss, BiLogoFirebase } from "react-icons/bi";
 ---
 
-<div class="bento-cell">
-	<article>
-		Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-		Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
-		cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y
-		los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años,
-		sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. 
-		Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum,
-		y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
-	</article>
-</div>
+<section class="bento-cell">
+	<h2>Skills</h2>
+	<ul>
+		<li>
+			<DiHtml5/>
+			<h6>HTML</h6>
+		</li>
+		<li>
+			<DiCss3 />
+			<h6>CSS</h6>
+		</li>
+		<li>
+			<DiJavascript />
+			<h6>Java Script</h6>
+		</li>
+		<li>
+			<DiReact/>
+			<h6>React</h6>
+		</li>
+		<li>
+			<BiLogoFirebase />
+			<h6>Firebase</h6>
+		</li>
+		<li>
+			<DiNpm />
+			<h6>NPM</h6>
+		</li>
+		<li>
+			<DiNodejsSmall/>
+			<h6>Node</h6>
+		</li>
+		<li>
+			<DiBootstrap />
+			<h6>Bootstrap</h6>
+		</li>
+		<li>
+			<BiLogoTailwindCss />
+			<h6>Tailwind</h6>
+		</li>
+	</ul>
+</section>
 
 <!-- Tenemos una variable --main-color -->
 
 <style>
-	div {
-		grid-area: b;
+	section {
 		display: flex;
-		align-items: center;
-		gap: 2rem;
+		flex-direction: column;
+		padding: 1rem;
+	}
+	h2 {
+		text-align: center;
+		font-family: Kode Mono;
 	}
 
-	article {
-		padding: 1rem;
-		max-height: 20rem;
-		overflow: hidden;
-		text-overflow: ellipsis;
+	ul {
+		display: grid;
+		margin-block: auto;
+		grid-template-columns: repeat(auto-fill, minmax(5rem, 6rem));
+		justify-content: center;
+		justify-items: center;
+		gap: clamp(0.5rem, 1vw, 2rem);
+		list-style: none;
 	}
+	li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-block: 1rem;
+		width: clamp(5rem, 10vw, 5rem);
+		text-align: center;
+		border-radius: 1rem;
+		color: var(--color-three);
+		background: var(--contrast-gradient);
+		filter: brightness(1);
+		transition: filter 200ms;
+	}
+	li:hover {
+		filter: brightness(1.5);
+	}
+	li svg {
+		font-size: clamp(1rem, 5vw, 2rem);
+		font-weight: 900;
+		color: #010101;
+	}
+	h6 {
+		color: #010101;
+		letter-spacing: 1px;
+		font-family: Kode Mono;
+	}
+
 </style>

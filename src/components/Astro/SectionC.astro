@@ -1,33 +1,57 @@
 ---
-
+import { BiLogoGmail, BiLogoLinkedinSquare, BiLogoGithub } from "react-icons/bi";
+import { FaPhoneSquareAlt } from "react-icons/fa";
 ---
 
-<div class="bento-cell">
-	<article>
-		Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-		Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
-		cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y
-		los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años,
-		sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. 
-		Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum,
-		y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
-	</article>
-</div>
+<section class="bento-cell">
+	<h1> Contact Me </h1>
+	<ul>
+		<li>
+			<BiLogoGmail/>
+			<a href="mailto:memo92975@gmail.com" target="__blank">Gmail</a>
+		</li>
+		<li>
+			<BiLogoLinkedinSquare/>
+			<a href="https://www.linkedin.com/in/guillermo-castro-vargas-303abb231/" target="__blank">LinkedIn</a>
+		</li>
+		<li>
+			<BiLogoGithub/>
+			<a href="https://github.com/GuillermoJCV" target="__blank">Github</a>
+		</li>
+		<li>
+			<FaPhoneSquareAlt/>
+			<a href="tel:+50662530811" target="__blank">Phone</a>
+		</li>
+	</ul>
+</section>
 
 <!-- Tenemos una variable --main-color -->
 
 <style>
-	div {
-		grid-area: c;
+	section {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
 		gap: 2rem;
+		padding: 3rem;
 	}
 
-	article {
-		padding: 1rem;
-		max-height: 20rem;
-		overflow: hidden;
-		text-overflow: ellipsis;
+	h1 {
+		text-align: center;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		justify-content: center;
+		align-items: center;
+
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		line-height: 2rem;
+		font-size: 1.5rem;
 	}
 </style>

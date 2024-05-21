@@ -33,9 +33,9 @@ const { title } = Astro.props;
 		--third-color: rgb(190,0,0);
 
 		/*Para los colores de texto*/
-		--color-one: rgb(16,16,16);
-		--color-two: rgb(61,61,61);
-		--color-three: rgb(69,69,69);
+		--color-one: rgb(125,255,255);
+		--color-two: rgb(161,255,253);
+		--color-three: rgb(205,255,252);
 
 		/*Para el contraste*/
 		--contrast-color: rgb(255,251,68);
@@ -45,9 +45,9 @@ const { title } = Astro.props;
 		--background-gradient-3: linear-gradient(127deg, rgba(130,0,0,.8), rgba(130,0,0,0) 70.71%);
 		--background-gradient-1: linear-gradient(336deg, rgba(190,0,0,.8), rgba(190,0,0,0) 70.71%);
 
-		--text-gradient-2: linear-gradient(217deg, rgba(16,16,16,.8), rgba(16,16,16,0) 70.71%);
-		--text-gradient-3: linear-gradient(127deg, rgba(61,61,61,.8), rgba(61,61,61,0) 70.71%);
-		--text-gradient-1: linear-gradient(336deg, rgba(69,69,69,.8), rgba(69,69,69,0) 70.71%);
+		--text-gradient-2: linear-gradient(217deg, rgba(125,255,255,.8), rgba(125,255,255,0) 70.71%);
+		--text-gradient-3: linear-gradient(127deg, rgba(161,255,253,.8), rgba(161,255,253,0) 70.71%);
+		--text-gradient-1: linear-gradient(336deg, rgba(205,255,252,.8), rgba(205,255,252,0) 70.71%);
 
 	}
 	* {
@@ -63,17 +63,28 @@ const { title } = Astro.props;
 
 	}
 
-	.bento-cell {
-		min-width: 10rem;
-		border-radius: 1rem;
-		background: var(--background-gradient-1),
-            		var(--background-gradient-2),
-            		var(--background-gradient-3);
-        box-shadow: 0px 0px 10px var(--main-color);
+	strong {
+		color: var(--third-color);
+	}
+
+	.emphasis {
+		font-size: 1.2rem;
+		background-color: inherit;
+		background: var(--contrast-color);
+		font-weight: 900;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		filter: brightness(1.5) drop-shadow(0px 0px 5px rgba(125,255,255,0.3));
+	}
+	.emphasis-two {
+		font-size: 1.2rem;
+		background-color: inherit;
+		background: var(--second-color);
+		font-weight: 900;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		filter: brightness(1.5) drop-shadow(0px 0px 5px rgba(125,255,255,0.3)) invert(100%);
 	}
 
 
-
 </style>
-
-
