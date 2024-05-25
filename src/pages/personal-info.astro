@@ -1,6 +1,7 @@
 ---
 import PersonalInfoLayout from '@/layouts/PersonalInfoLayout.astro';
 import { FaReact } from "react-icons/fa";
+import { IoIosArrowBack } from "react-icons/io";
 
 /* Custom elements*/
 import HireForm from "@/components/React/hire-form.tsx"
@@ -9,7 +10,9 @@ import HireForm from "@/components/React/hire-form.tsx"
 
 <PersonalInfoLayout title="Personal Information">
 	<main>
-		<a href="/">Back</a>
+		<a href="/">
+			<IoIosArrowBack />
+		</a>
 		<figure>
 			<img src="https://scontent.fsjo12-1.fna.fbcdn.net/v/t1.6435-1/162494658_125729942893446_5342045643499647094_n.jpg?stp=dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4ul636bs6zYQ7kNvgGtjvF_&_nc_ht=scontent.fsjo12-1.fna&oh=00_AfBzV9iin4avDB_Cc6C_XunuGOlV4UnUithHGC0yXoIUuw&oe=6653C41C" alt="face">
 			<figcaption>
@@ -71,10 +74,6 @@ import HireForm from "@/components/React/hire-form.tsx"
 					</li>
 				</ul>
 			</details>
-			<react-icon class="icon">
-				<FaReact />
-			</react-icon>
-			<script src="src/scripts/icon-rendering.ts" client:load></script>
 		</section>
 		<HireForm client:load/>
 	</main>
@@ -95,6 +94,7 @@ import HireForm from "@/components/React/hire-form.tsx"
 }
 
 main {
+	position: relative;
 	box-shadow: 0px	0px	5px var(--color-one);
 	border-inline: 2px solid var(--color-one);
 	margin-inline: auto;
@@ -106,6 +106,19 @@ main {
 	min-height: 100vh;
 
 	font-family: Ubuntu;
+}
+
+main > a {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 2rem;
+	border: 1px solid white;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	text-decoration: none;
+	color: inherit;
+	filter: brightness(0.6);
 }
 
 figure {
@@ -163,19 +176,6 @@ section {
 }
 .icon {
 	grid-area: icon;
-}
-
-react-icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.hide {
-	display: none;
-}
-
-react-icon > svg {
-	font-size: 5rem;
 }
 
 details {
