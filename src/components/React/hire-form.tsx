@@ -25,9 +25,10 @@ function HireForm() {
 				<input type="text" name="name" id="name"/>
 				<label htmlFor="email">Email de empresa</label>
 				<input type="email" name="email" id="email"/>
-				<label htmlFor="comments">
-					
-				</label>
+				<label htmlFor="comments">Comentarios</label>
+				<textarea name="comments" id="comments">
+						Escribe un comentario
+				</textarea>
 			</div>
 			<div className="hire-form__buttons">
 				<button type="submit" className="main">Enviar</button>
