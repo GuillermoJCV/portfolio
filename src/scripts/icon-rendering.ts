@@ -2,7 +2,7 @@ const hobbies : HtmlElement = document.querySelector("details.hobbies")
 const skills : HtmlElement = document.querySelector("details.skills")
 const icon : HtmlSpanElement = document.querySelector("react-icon.icon")
 
-const handleOnClick = async (e) => {
+const handleOnClick = async () => {
 	const width : number = window.innerWidth
 	if((hobbies.open || skills.open) && width > 810) {
 		icon.classList.remove("hide")
