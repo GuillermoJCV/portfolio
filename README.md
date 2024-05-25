@@ -21,11 +21,13 @@ Quiero que tenga:
 * ~~Lo que hago~~
 
 Y al tocar la seccion quiero que se abra una página que tenga
-* La foto de perfil centrada
-* Mi nombre
-* Lo que hago
-* La descripción
+* ~~La foto de perfil centrada~~
+* ~~Mi nombre~~
+* ~~Lo que hago~~
+* ~~La descripción~~
 * Un botón para ir hacia atrás
+* Un formulario por si me quieren contratar
+* Un footer a esta página (desde el layout)
 
 ## Seccion de Habilidades
 

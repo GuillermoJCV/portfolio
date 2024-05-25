@@ -2,6 +2,9 @@
 import PersonalInfoLayout from '@/layouts/PersonalInfoLayout.astro';
 import { FaReact } from "react-icons/fa";
 
+/* Custom elements*/
+import HireForm from "@/components/React/hire-form.tsx"
+
 ---
 
 <PersonalInfoLayout title="Personal Information">
@@ -71,24 +74,9 @@ import { FaReact } from "react-icons/fa";
 			<react-icon class="icon">
 				<FaReact />
 			</react-icon>
-			<script client:only>
-				const hobbies = document.querySelector("details.hobbies")
-				const skills = document.querySelector("details.skills")
-				const icon = document.querySelector("react-icon.icon")
-
-				const handleOnClick = async (e) => {
-					const width = window.innerWidth
-					if((hobbies.open || skills.open) && width > 810) {
-						icon.classList.remove("hide")
-					} else {
-						icon.classList.add("hide")
-					}
-				}
-				hobbies.addEventListener('click', handleOnClick)
-				skills.addEventListener('click', handleOnClick)
-
-			</script>
+			<script src="src/scripts/icon-rendering.ts" client:load></script>
 		</section>
+		<HireForm client:load/>
 	</main>
 </PersonalInfoLayout>
 
