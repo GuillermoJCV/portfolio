@@ -64,10 +64,6 @@ const { title } = Astro.props;
 
 	}
 
-	strong {
-		color: var(--third-color);
-	}
-
 	.emphasis {
 		font-size: 1.2rem;
 		background-color: inherit;
@@ -78,13 +74,9 @@ const { title } = Astro.props;
 		filter: brightness(1.5) drop-shadow(0px 0px 5px rgba(125,255,255,0.3));
 	}
 	.emphasis-two {
-		font-size: 1.2rem;
-		background-color: inherit;
-		background: var(--second-color);
+		text-decoration: none;
 		font-weight: 900;
-		-webkit-text-fill-color: transparent;
-		-webkit-background-clip: text;
-		filter: brightness(1.5) drop-shadow(0px 0px 5px rgba(125,255,255,0.3)) invert(100%);
+		color: var(--contrast-color);
 	}
 
 

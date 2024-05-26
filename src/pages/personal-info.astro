@@ -13,7 +13,7 @@ import HireForm from "@/components/React/hire-form.tsx"
 			<IoIosArrowBack />
 		</a>
 		<figure>
-			<img src="https://scontent.fsjo12-1.fna.fbcdn.net/v/t1.6435-1/162494658_125729942893446_5342045643499647094_n.jpg?stp=dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4ul636bs6zYQ7kNvgGtjvF_&_nc_ht=scontent.fsjo12-1.fna&oh=00_AfBzV9iin4avDB_Cc6C_XunuGOlV4UnUithHGC0yXoIUuw&oe=6653C41C" alt="face">
+			<img src="https://avatars.githubusercontent.com/u/116851513?v=4" alt="face">
 			<figcaption>
 				Guillermo Jesús Castro Vargas
 			</figcaption>
@@ -128,13 +128,14 @@ figure {
 }
 
 img {
+	height: clamp(5rem, 30vw, 12rem);
 	aspect-ratio: 1/1;
 	border-radius: 50%;
 }
 figcaption {
 		font-size: 2rem;
 		background-color: inherit;
-		background: linear-gradient(to bottom, var(--main-color), var(--third-color));
+		background: linear-gradient(to bottom, var(--second-color), var(--third-color));
         text-shadow: 2px 2px 5px rgba(205,255,252, 0.1);
 		-webkit-text-fill-color: transparent;
 		-webkit-background-clip: text;
@@ -154,7 +155,6 @@ custom-emphasis {
 section {
 	display: var(--section-display);
 	flex-direction: column;
-	align-items: center;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto auto;
 	grid-template-areas: 

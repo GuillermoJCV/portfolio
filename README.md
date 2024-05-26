@@ -8,12 +8,13 @@
 * ~~Separar todos los componentes del componente principal~~
 * ~~Acomodar las secciones para que todas se vean igual.~~
 * ~~Escribir qué habrá en el componente de información personal~~
-* Rellenar la primera seccion con una descripcion de mí
+* ~~Rellenar la primera seccion con una descripcion de mí~~
 
 ## Seccion de Información Principal
 
 ### Tareas pendientes
-* Arreglar el problema de mi nombre (hace que el article se mueva)
+* ~~Arreglar el problema de mi nombre (hace que el article se mueva)~~
+* Dar funcionalidad al formulario de contratación
 
 Quiero que tenga:
 * ~~Mi foto de perfil~~
@@ -25,9 +26,9 @@ Y al tocar la seccion quiero que se abra una página que tenga
 * ~~Mi nombre~~
 * ~~Lo que hago~~
 * ~~La descripción~~
-* Un botón para ir hacia atrás
-* Un formulario por si me quieren contratar
-* Un footer a esta página (desde el layout)
+* ~~Un botón para ir hacia atrás~~
+* ~~Un formulario por si me quieren contratar~~
+* ~~Un footer a esta página (desde el layout)~~
 
 ## Seccion de Habilidades
 
@@ -53,7 +54,7 @@ Quiero que tenga:
 
 Quiero que cada proyecto tenga:
 * ~~Una foto (que sus proporciones sean 1700/1000)~~
-* Un nombre
+* ~~Un nombre~~
 * ~~Una descripción~~
 * ~~Habilidades que utilicé para realizar el proyecto~~
 
