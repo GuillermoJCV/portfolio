@@ -1,5 +1,7 @@
 import { useRef, useEffect } from "react"
 import "./hire-form.css"
+import { FaCheck, FaTimes } from "react-icons/fa";
+import emailjs from '@emailjs/browser';
 
 type HireFormElement = HTMLFormElement & {
 	name : HTMLInputElement;
@@ -10,14 +12,28 @@ type HireFormElement = HTMLFormElement & {
 function HireForm() {
 	const hireRef = useRef<HireFormElement>(null)
 
+	const sendEmail = (form : HireFormElement | null) => {
+
+		if(form) {
+			emailjs
+			.sendForm('service_k670svs', 'template_jazxkld', form, {
+				publicKey: 'rEE4eKF3OH1kpct7r',
+			})
+			.then(() => {
+					console.log('SUCCESS!');
+				},
+				(error) => {
+				console.log('FAILED...', error.text);
+				},
+			);
+		}
+	}
+
 	const HandleOnDelete = (element : HireFormElement | null) => {
 		if(element) {
-			element.name ? element.name.value = "" : console.log("name ins't an instance of HTMLInputElement")
-
-			element.email ? element.email.value = "" : console.log("email ins't an instance of HTMLInputElement")
-
-			element.comments ? element.comments.value = "" : console.log("comments ins't an instance of HTMLTextAreaElement")
-
+			element.name.value = ""
+			element.email.value = ""
+			element.comments.value = ""
 		}
 	}
 
@@ -59,6 +75,8 @@ function HireForm() {
 				<button type="submit" className="main">Enviar</button>
 				<button type="button" className="second" onClick={() => HandleOnDelete(hireRef.current)}>Eliminar</button>
 			</div>
+			<span className="hire-form__succcess "><FaCheck/></span>
+			<span className="hire-form__error "><FaTimes/></span>
 		</form>
 	)
 }
