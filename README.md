@@ -14,7 +14,7 @@
 
 ### Tareas pendientes
 * ~~Arreglar el problema de mi nombre (hace que el article se mueva)~~
-* Dar funcionalidad al formulario de contratación
+* ~~Dar funcionalidad al formulario de contratación~~
 
 Quiero que tenga:
 * ~~Mi foto de perfil~~
