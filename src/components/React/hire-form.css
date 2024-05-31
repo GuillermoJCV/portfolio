@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono&family=Ubuntu&display=swap');
 
 .hire-form {
+	--error-red: red;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -20,8 +21,8 @@
 
 .hire-form__inputs > textarea {
 	width: 100%;
-	height: 4rem;
-	resize: none;
+	min-height: 4rem;
+	resize: vertical;
 }
 
 .hire-form__buttons {
@@ -52,24 +53,75 @@
 }
 
 .hire-form__succcess {
-	position: absolute;
-	height: 4rem;
-}
-.hire-form__error {
-	position: absolute;
-	height: 4rem;
+	height: 3rem;
+	width: 3rem;
+	background-color: green;
+	scale: 0;
+	transition: scale 200ms;
 }
 
 .hire-form__succcess > svg {
-	aspect-ratio: 1/1;
-	
-	border-radius: 50%;
-	background-color: green;
+	font-size: 2rem;
 }
 
-.hire-form__error > svg {
+.hire-form__error {
+	--elements-margin: clamp(0rem, 100%, 1rem);
+	border-left: 5px solid var(--error-red);
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	overflow: hidden;
+	min-height: fit-content;
+	background: rgba(100, 100, 100, 0.7);
+	width: 0;
+	border: 0;
+	transition: width 300ms, border 500ms;
+}
+
+.hire-form__error > span {
+	margin: var(--elements-margin);
+	height: 3rem;
+	width: 3rem;
+	background-color: var(--error-red);
+	transition: scale 200ms;
+}
+
+.hire-form__error > span > svg {
+	font-size: 2rem;
+}
+
+.hire-form__error__article {
+	margin: var(--elements-margin);
+	display: flex;
+	flex-direction: column;
+}
+
+.hire-form__error__article > h3 {
+	font-weight: bolder;
+}
+
+/* Modifiers */
+.hire-form__error[class*="show"] {
+	width: 90%;
+	border-left: 5px solid var(--error-red) !important;
+}
+.hire-form__succcess[class*="show"] {
+	scale: 1;
+}
+
+[class*="circle"] {
 	aspect-ratio: 1/1;
-	
-	border-radius: 50%;
-	background-color: red;
+	border-radius: 999999rem;
+}
+
+[class*="centered-items"] {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center {
+	position: absolute;
+	inset: 0;
+	margin: auto;
 }
