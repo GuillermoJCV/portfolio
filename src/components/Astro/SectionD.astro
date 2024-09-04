@@ -1,12 +1,84 @@
 ---
 import ProjectComponent from "./projects/ProjectComponent.astro"
 import { 	SiFirebase, SiHtml5, SiCss3, SiJavascript, SiVite,
-			SiGooglecloud, SiVercel } from "react-icons/si";
+			SiGooglecloud, SiVercel, SiAstro, SiNestjs,
+			SiPrisma, SiTailwindcss } from "react-icons/si";
+import { FaCloudflare, FaReact } from "react-icons/fa6";
+import { DiSqllite, DiNpm } from "react-icons/di";
+
+
 
 ---
 
 <section class="bento-cell">
 	
+	<ProjectComponent 
+	title="Leafy Shop E-commerce"
+	imgUrl="https://i.pinimg.com/originals/ad/35/ba/ad35ba47124786e3614be733cc94ede3.jpg"
+	webUrl="https://github.com/GuillermoJCV/leafyshop-front"
+	>
+		<article slot="description">
+			<h2>LeafyShop Project</h2>
+			<p>
+				Para este proyecto me uní con varios desarrolladores
+				para crear una e-commerce con funcionalidad completa.
+			</p>
+			<p>
+				Es mi proyecto más actual y me encargo de crear el backend.
+			</p>
+			<p>
+				La idea de este prooyecto fue poner a los integrantes a prueba y
+				utilizar tecnologías que nunca antes habían usado.
+				Por lo que a mí me tocó el backend y base de datos a pesar de ser de frontend.
+				Actualmente seguimos desarrollando y es un proyecto bastante tardado
+			</p>
+			<p>
+				Algunas de las tecnologías que utilicé fueron:
+			</p>
+		</article>
+		<ul slot="skills">
+			{/* FRONTEND */}
+			<column-custom>
+				<li>
+					<FaReact />
+					React
+				</li>
+				<li>
+					<SiAstro  />
+					Astro
+				</li>
+				<li>
+					<SiTailwindcss />
+					TwCSS
+				</li>
+				<li>
+					<DiNpm  />
+					NPM
+				</li>
+			</column-custom>
+			
+			{/* BACKEND */}
+			<column-custom>
+				<li>
+					<FaCloudflare />
+					CF
+				</li>
+				<li>
+					<SiNestjs />
+					NestJS
+				</li>
+				<li>
+					<SiPrisma />
+					Prisma
+				</li>
+				<li>
+					<DiSqllite />
+					SQL
+				</li>				
+			</column-custom>
+		</ul>
+	</ProjectComponent>
+
 	<ProjectComponent 
 	title="Roscals web"
 	imgUrl="https://i.pinimg.com/originals/4d/57/d0/4d57d0c826e8029ce917fe5b2efe0897.png"
@@ -105,7 +177,7 @@ import { 	SiFirebase, SiHtml5, SiCss3, SiJavascript, SiVite,
 		align-items: center;
 		gap: 1rem;
 		padding: 1rem;
-		max-height: 45vh;
+		height: 50vh;
 		overflow: auto;
 	}
 	article {
@@ -115,6 +187,12 @@ import { 	SiFirebase, SiHtml5, SiCss3, SiJavascript, SiVite,
 		padding: var(--inherit-padding);
 		font-family: Ubuntu;
 	}
+
+	column-custom {
+		display: flex;
+		flex-direction: column;
+	}
+
 	ul {
 		display: flex;
 		flex-wrap: wrap;

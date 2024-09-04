@@ -1,9 +1,11 @@
 ---
 interface Props {
-	title: string;
-	imgUrl: string;
-	webUrl: string;
+	title		: string;
+	imgUrl		: string;
+	webUrl		: string;
 }
+
+import { Image } from "astro:assets"
 
 const { title, imgUrl, webUrl } = Astro.props;
 ---
@@ -11,7 +13,10 @@ const { title, imgUrl, webUrl } = Astro.props;
 <div>
 	<a href={webUrl} target="__blank">
 		<figure>
-			<img src={imgUrl} alt={title}/>
+			<img 	src={imgUrl} 
+					alt={title}
+					decoding="async"
+  					loading="lazy"/>
 		</figure>
 	</a>
 	<section>
@@ -21,20 +26,9 @@ const { title, imgUrl, webUrl } = Astro.props;
 </div>
 
 <style>
-	@media (width < 700px) {
-		:root {
-			--justify-div: center;
-			--section-display: none;
-		}
-	}
-	@media (width > 701px) {
-		:root {
-			--justify-div: flex-start;
-			--section-display: flex;
-		}
-	}
 	div {
 		display: flex;
+		flex-direction: var(--flex-direction);
 		justify-content: var(--justify-div);
 		gap: 1rem;
 		background: var(--text-gradient-1),
@@ -45,11 +39,16 @@ const { title, imgUrl, webUrl } = Astro.props;
 		overflow: hidden;
 		width: 100%;
 	}
+	a {
+		width: var(--figure-width);
+	}
 	figure {
 		overflow: hidden;
+		height: 100%;
 	}
 	img {
 		border-radius: 1rem;
+		width: var(--figure-width);
 		height: 20rem;
 		aspect-ratio: 1112/775;
 		scale: 1;
@@ -65,6 +64,48 @@ const { title, imgUrl, webUrl } = Astro.props;
 		flex-direction: column;
 		overflow-y: auto;
 		overflow-x: hidden;
+	}
+
+	@media (max-width: 639px) {
+		:root {
+			--justify-div: center;
+			--section-display: none;
+			--flex-direction : row;
+			--figure-width : 100%
+		}
+	}
+	@media (min-width: 640px) {
+		:root {
+			--justify-div: center;
+			--section-display: none;
+			--flex-direction : column;
+			--figure-width : 100%
+		}
+	}
+	@media (min-width: 768px) {
+		:root {
+			--justify-div: flex-start;
+			--section-display: flex;
+			--flex-direction : column;
+			--figure-width : 100%
+		}
+	}
+	@media (min-width: 1024px) {
+		:root {
+			--justify-div: flex-start;
+			--section-display: flex;
+			--flex-direction : column;
+			--figure-width : 100%
+		}
+	}
+
+	@media (min-width: 1280px) {
+		:root {
+			--justify-div: flex-start;
+			--section-display: flex;
+			--flex-direction : row;
+			--figure-width : auto
+		}
 	}
 
 </style>
