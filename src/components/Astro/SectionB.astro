@@ -1,6 +1,8 @@
 ---
-import { DiReact, DiJavascript , DiNodejsSmall, DiHtml5, DiCss3, DiBootstrap, DiNpm } from "react-icons/di";
-import { BiLogoTailwindCss, BiLogoFirebase } from "react-icons/bi";
+import { DiReact, DiJavascript, DiHtml5, DiCss3 } from "react-icons/di";
+import { SiNestjs, SiTypescript } from "react-icons/si";
+import { FaDatabase, FaCloudflare } from "react-icons/fa6";
+import { MdDataObject } from "react-icons/md";
 ---
 
 <section class="bento-cell">
@@ -16,31 +18,31 @@ import { BiLogoTailwindCss, BiLogoFirebase } from "react-icons/bi";
 		</li>
 		<li>
 			<DiJavascript />
-			<h6>Java Script</h6>
+			<h6>Javascript</h6>
 		</li>
 		<li>
 			<DiReact/>
 			<h6>React</h6>
 		</li>
 		<li>
-			<BiLogoFirebase />
-			<h6>Firebase</h6>
+			<SiTypescript />
+			<h6>Typescript</h6>
 		</li>
 		<li>
-			<DiNpm />
-			<h6>NPM</h6>
+			<SiNestjs />
+			<h6>Nest</h6>
 		</li>
 		<li>
-			<DiNodejsSmall/>
-			<h6>Node</h6>
+			<FaDatabase />
+			<h6>ORM's</h6>
 		</li>
 		<li>
-			<DiBootstrap />
-			<h6>Bootstrap</h6>
+			<FaCloudflare />
+			<h6>Cloudflare</h6>
 		</li>
 		<li>
-			<BiLogoTailwindCss />
-			<h6>Tailwind</h6>
+			<MdDataObject />
+			<h6>POO</h6>
 		</li>
 	</ul>
 </section>
@@ -52,6 +54,8 @@ import { BiLogoTailwindCss, BiLogoFirebase } from "react-icons/bi";
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
+		max-height: calc(50vh - var(--space-between));
+		overflow: auto;
 	}
 	h2 {
 		text-align: center;

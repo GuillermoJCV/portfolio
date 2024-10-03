@@ -2,19 +2,59 @@
 import ProjectComponent from "./projects/ProjectComponent.astro"
 import { 	SiFirebase, SiHtml5, SiCss3, SiJavascript, SiVite,
 			SiGooglecloud, SiVercel, SiAstro, SiNestjs,
-			SiPrisma, SiTailwindcss } from "react-icons/si";
-import { FaCloudflare, FaReact } from "react-icons/fa6";
+			SiPrisma, SiTailwindcss, SiReact } from "react-icons/si";
+import { FaCloudflare, FaReact, FaNodeJs } from "react-icons/fa6";
 import { DiSqllite, DiNpm } from "react-icons/di";
-
-
-
 ---
 
 <section class="bento-cell">
 	
 	<ProjectComponent 
+	title="Roscals web"
+	imgUrl="https://i.pinimg.com/originals/4d/57/d0/4d57d0c826e8029ce917fe5b2efe0897.png"
+	webUrl="https://roscals.web.app"
+	>
+		<article slot="description">
+			<h2>Roscals Project</h2>
+			<p>
+				En este proyecto me dieron 3 días para terminarlo y me pidieron especificamente agregar imagenes y la información
+				que se puede ver en el proyecto
+			</p>
+			<p>
+				Algunos de los retos a los que me enfrenté fue el tiempo, claramente, pero también a utilizar
+				features nuevas de JavaScript que no había utilizado antes como el IntersectionObserver.
+			</p>
+			<p>
+				Algunas de las tecnologías que utilicé fueron:
+			</p>
+		</article>
+		<ul slot="skills">
+			<li>
+				<SiFirebase />
+				<p>Firebase</p>
+			</li>
+			<li>
+				<SiHtml5 />
+				<p>HTML</p>
+			</li>
+			<li>
+				<SiCss3 />
+				<p>CSS</p>
+			</li>
+			<li>
+				<SiJavascript />
+				<p>JS</p>
+			</li>
+			<li>
+				<SiVite />
+				<p>Vite</p>
+			</li>
+		</ul>
+	</ProjectComponent>
+
+	<ProjectComponent 
 	title="Leafy Shop E-commerce"
-	imgUrl="https://i.pinimg.com/originals/ad/35/ba/ad35ba47124786e3614be733cc94ede3.jpg"
+	imgUrl="https://i.pinimg.com/736x/0c/86/f1/0c86f127ad642f18b9b2b8188de032ee.jpg"
 	webUrl="https://github.com/GuillermoJCV/leafyshop-front"
 	>
 		<article slot="description">
@@ -80,19 +120,22 @@ import { DiSqllite, DiNpm } from "react-icons/di";
 	</ProjectComponent>
 
 	<ProjectComponent 
-	title="Roscals web"
-	imgUrl="https://i.pinimg.com/originals/4d/57/d0/4d57d0c826e8029ce917fe5b2efe0897.png"
-	webUrl="https://roscals.web.app"
+	title="SQL Course"
+	imgUrl="https://i.pinimg.com/736x/8f/98/e7/8f98e710cae69b9d024ae561a25522f7.jpg"
+	webUrl="https://motoservicios.pages.dev/"
 	>
 		<article slot="description">
-			<h2>Roscals Project</h2>
+			<h2>Motoservicios Company</h2>
 			<p>
-				En este proyecto me dieron 3 días para terminarlo y me pidieron especificamente agregar imagenes y la información
-				que se puede ver en el proyecto
+				En este proyecto me llamó un amigo de backend porque no se le daba bien
+				la programación web. Y me pidió una aplicacion web hecha en react
+				para poder registrar productos como un CRUD tradicional.
 			</p>
 			<p>
-				Algunos de los retos a los que me enfrenté fue el tiempo, claramente, pero también a utilizar
-				features nuevas de JavaScript que no había utilizado antes como el IntersectionObserver.
+				En este proyecto se debían registrar no solo productos sino también:
+				<li>Usuarios</li>
+				<li>Sucursales</li>
+				<li>Ordenes de compra</li>
 			</p>
 			<p>
 				Algunas de las tecnologías que utilicé fueron:
@@ -100,27 +143,20 @@ import { DiSqllite, DiNpm } from "react-icons/di";
 		</article>
 		<ul slot="skills">
 			<li>
-				<SiFirebase />
-				<p>Firebase</p>
+				<SiReact />
+				<p>React</p>	
 			</li>
 			<li>
-				<SiHtml5 />
-				<p>HTML</p>
+				<FaNodeJs />
+				<p>NodeJS</p>
 			</li>
 			<li>
-				<SiCss3 />
-				<p>CSS</p>
-			</li>
-			<li>
-				<SiJavascript />
-				<p>JS</p>
-			</li>
-			<li>
-				<SiVite />
-				<p>Vite</p>
+				<FaCloudflare />
+				<p>CF</p>
 			</li>
 		</ul>
 	</ProjectComponent>
+
 	<ProjectComponent 
 	title="SQL Course"
 	imgUrl="https://i.pinimg.com/originals/c1/80/36/c18036408cd8560906d52cad2590aee9.png"
@@ -177,7 +213,6 @@ import { DiSqllite, DiNpm } from "react-icons/di";
 		align-items: center;
 		gap: 1rem;
 		padding: 1rem;
-		height: 50vh;
 		overflow: auto;
 	}
 	article {
